@@ -4,11 +4,12 @@
     {
         static void Main(string[] args) 
         {
-            
-            string[] nameofRelativs = new string[5];
-            int[] ageofRelativs = new int[5];
-            int ageSum = 0;
+            // Skapar två arrayer för att lagra namnen och åldrarna på personerna.
+            string[] nameofRelativs = new string[5]; // Array för namn
+            int[] ageofRelativs = new int[5];        // Array för åldrar
+            int ageSum = 0;                          // Variabel för att hålla totala ålderssumman
 
+            // Loop för att mata in namn och åldrar från användaren för varje person.
             for (int i = 1; i < nameofRelativs.Length; i++)
             {
                 Console.WriteLine($"Vad heter person nummer {i}? ");
@@ -19,6 +20,7 @@
 
             }
 
+            // Loop för att skriva ut namnen och åldrarna för varje person samt räkna ålderssumman.
             for (int i = 1; i < ageofRelativs.Length; i++)
             {
                 Console.WriteLine("{0} är {1} år gammal.", nameofRelativs[i], ageofRelativs[i]);
@@ -26,8 +28,10 @@
 
             }
 
+            // Skriver ut den totala ålderssumman för alla släktingar.
             Console.WriteLine("Gemensamt är alla " + ageSum + " gamla.");
 
+            // Beräknar genomsnittsåldern och skriver ut den med två decimaler.
             double averageAge = (double)ageSum / ageofRelativs.Length;
             Console.WriteLine("Genomsnitt ålder är: {0:0.00}.", averageAge);
 
