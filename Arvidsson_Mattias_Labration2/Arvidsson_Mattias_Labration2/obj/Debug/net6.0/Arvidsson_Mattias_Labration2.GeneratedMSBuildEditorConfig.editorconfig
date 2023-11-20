@@ -9,3 +9,5 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Arvidsson_Mattias_Labration2
 build_property.ProjectDir = C:\Users\Mattr\Documents\GIK299\Objektorienterad programmering\Github\Arvidsson_Mattias_GIK299\Arvidsson_Mattias_Labration2\Arvidsson_Mattias_Labration2\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
