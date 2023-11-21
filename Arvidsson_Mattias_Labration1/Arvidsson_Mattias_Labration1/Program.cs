@@ -29,7 +29,7 @@
 
             }
 
-            // Skriver ut den totala ålderssumman för alla släktingar.
+            // Skriver ut den totala ålderssumman för alla personer.
             Console.WriteLine("Gemensamt är alla " + ageSum + " år gamla.");
 
             // Beräknar genomsnittsåldern och skriver ut den med två decimaler.
