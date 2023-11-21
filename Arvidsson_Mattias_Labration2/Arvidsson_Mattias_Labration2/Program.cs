@@ -43,38 +43,36 @@
                 // Beräknar genomsnittsåldern och skriver ut den med två decimaler.
                 double averageAge = (double)ageSum / ageofRelativs.Length;
                 Console.WriteLine("Genomsnitt ålder är: {0:0.00}.", averageAge);
-                //ändra till string
-                char answer;
-                Console.WriteLine("Vill du fortsätta eller avsluta? J eller N? ");
+                
+                string answer;
+                Console.WriteLine("Vill du fortsätta eller avsluta? ja eller nej? ");
 
                 do
-                    {
-                        // Console.WriteLine("Vill du fortsätta eller avsluta? J eller N? ");
-                        //Ändra till Readline. Ändra till Ja och Nej istället för J och N.
-                        answer = Char.ToLower((char)Console.Read());
+                {
+
+                        answer = (Console.ReadLine());
 
                         switch (answer)
                         {
 
-                            case 'j':
+                            case "ja":
                                 Console.WriteLine("Då börjar vi om ");
                                 break;
 
-                            case 'n':
+                            case "nej":
                                 Console.WriteLine("Då avslutar vi programmet ");
                                 running = false;
                                 break;
 
                             default:
                                 Console.WriteLine("Det är ett svar jag inte förstår... ");
-                                Console.WriteLine("Vill du fortsätta eller avsluta? J eller N? ");
-                                //answer = Char.ToLower((char)Console.Read());
+                                Console.WriteLine("Vill du fortsätta eller avsluta? ja eller nej? ");
                                 break;
 
                         }
 
                     }
-                    while (answer != 'j' && answer != 'n');
+                    while (answer != "ja" && answer != "nej");
             }
 
         }
