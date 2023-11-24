@@ -10,9 +10,8 @@
             // Skapar arrayer för att lagra information.
             int menuSelect = 0;
             int numberofPeople = 0;
-            string[] nameofRelativs = null;                       // Array för namn
-            int[] ageofRelativs = null;                           // Array för åldrar
-            int ageSum = 0;                                       // Variabel för att se totala ålderssumman
+            string[]? nameofRelativs = null;                       // Array för namn
+            int[]? ageofRelativs = null;                           // Array för åldrar
 
             while (menuSelect != 5)
             {
@@ -28,7 +27,7 @@
                     "\n------------------------------------------------"
                     );
 
-                menuSelect = Int32.Parse(Console.ReadLine());
+                menuSelect = Convert.ToInt32(Console.ReadLine());
 
                 switch (menuSelect)
                 {
@@ -45,7 +44,7 @@
                         for (int i = 0; i < numberofPeople; i++)
                         {
                             Console.WriteLine($"Vad heter person nummer {i + 1}? ");
-                            nameofRelativs[i] = Console.ReadLine();
+                            nameofRelativs[i] = Console.ReadLine() +"";
 
                             Console.WriteLine($"Hur gammal är person nummer {i + 1}? ");
                             ageofRelativs[i] = Convert.ToInt32(Console.ReadLine());
@@ -61,7 +60,6 @@
                             for (int i = 0; i < numberofPeople; i++)
                             {
                                 Console.WriteLine("{0} är {1} år gammal.", nameofRelativs[i], ageofRelativs[i]);
-                                ageSum += ageofRelativs[i];
                             }
                         }
 
@@ -76,8 +74,7 @@
 
                         if (nameofRelativs != null && ageofRelativs != null)
                         {
-                            // Loop för att skriva ut den totala ålderssumman för alla personer.
-                            Console.WriteLine("Gemensamt är alla " + ageSum + " år gamla.");
+                            Console.WriteLine("Gemensamt är alla " + ageofRelativs.Sum() + " år gamla.");
                         }
 
                         else
@@ -91,8 +88,7 @@
 
                         if (nameofRelativs != null && ageofRelativs != null)
                         {
-                            // Beräknar genomsnittsåldern och skriver ut den med två decimaler.
-                            double averageAge = (double)ageSum / ageofRelativs.Length;
+                            double averageAge = Convert.ToDouble(ageofRelativs.Sum()) / ageofRelativs.Length;
                             Console.WriteLine("Genomsnitt ålder är: {0:0.00}.", averageAge);
                         }
 
