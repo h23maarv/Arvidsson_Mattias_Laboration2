@@ -7,15 +7,16 @@
         static void Main(string[] args)
         {
 
-            // Skapar arrayer för att lagra information.
+            // Variabler för menyval, antal personer, namn och åldrar.
             int menuSelect = 0;
             int numberofPeople = 0;
-            string[]? nameofRelativs = null;                       // Array för namn
-            int[]? ageofRelativs = null;                           // Array för åldrar
+            string[]? nameofRelativs = null;    // Array för att lagra namnen på personerna.
+            int[]? ageofRelativs = null;        // Array för att lagra åldrarna på personerna.
 
+            // Huvudloop för programmet, fortsätter tills användaren väljer att avsluta(menuSelect == 5).
             while (menuSelect != 5)
             {
-
+                // Skriver ut menyalternativ.
                 Console.WriteLine(
                     "\n------------------------------------------------" +
                     "\nVälj ett av alternativen: " +
@@ -27,16 +28,20 @@
                     "\n------------------------------------------------"
                     );
 
+                // Läser in användarens menyval.
                 menuSelect = Convert.ToInt32(Console.ReadLine());
 
+                // Hanterar användarens val med en switch-sats.
                 switch (menuSelect)
                 {
 
                     case 1:
 
+                        // Användaren väljer att lägga till personer.
                         Console.WriteLine("Hur många personer vill du lägga till?");
                         numberofPeople = Convert.ToInt32(Console.ReadLine());
 
+                        // Skapar arrayer för namn och ålder baserat på användarens inmatning.
                         nameofRelativs = new string[numberofPeople];
                         ageofRelativs = new int[numberofPeople];
 
@@ -54,6 +59,7 @@
 
                     case 2:
 
+                        // Användaren väljer att skriva ut namn och ålder.
                         if (nameofRelativs != null && ageofRelativs != null)
                         {
                             // Loop för att skriva ut namnen och åldrarna för varje person samt räkna ålderssumman.
@@ -72,6 +78,7 @@
 
                     case 3:
 
+                        // Användaren väljer att skriva ut den totala ålderssumman.
                         if (nameofRelativs != null && ageofRelativs != null)
                         {
                             Console.WriteLine("Gemensamt är alla " + ageofRelativs.Sum() + " år gamla.");
@@ -86,6 +93,7 @@
 
                     case 4:
 
+                        // Användaren väljer att skriva ut genomsnittsåldern.
                         if (nameofRelativs != null && ageofRelativs != null)
                         {
                             double averageAge = Convert.ToDouble(ageofRelativs.Sum()) / ageofRelativs.Length;
@@ -101,12 +109,14 @@
 
                     case 5:
 
+                        // Användaren väljer att avsluta programmet.
                         Console.WriteLine("Då avslutar vi programmet. ");
 
                         break;
 
                     default:
 
+                        // Felaktigt menyval om användaren skriver in fel siffra.
                         Console.WriteLine("Det är ett svar jag inte förstår... Du behöver ange en siffra mellan 1-5.\n");
 
                         break;
