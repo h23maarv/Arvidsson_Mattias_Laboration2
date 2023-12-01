@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Arvidsson_Mattias_Labration3
 {
-	public enum Gender
+    // Detta är en enum för att representera olika kön.
+    public enum Gender
 	{
-		Woman,
-		Man,
-		Nonbinary,
-		Other
-	}
+		Man,        // Representerar manligt kön.
+        Woman,      // Representerar kvinnligt kön.
+        Nonbinary,  // Representerar icke-binärt kön.
+        Other       // Representerar andra kön som inte täcks av de tidigare alternativen.
+    }
 }
